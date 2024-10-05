@@ -1,10 +1,15 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+  "builds": [
+    {
+      "src": "view/home/index.html",
+      "use": "@vercel/static-build"
+    }
   ],
-  "redirects": [],
-  "headers": [],
-  "cleanUrls": true
+  "routes": [
+    { "src": "/", "dest": "/view/home/index.html" },
+    { "src": "/img/(.*)", "dest": "/img/$1" },
+    { "src": "/script/(.*)", "dest": "/script/$1" },
+    { "src": "/style/(.*)", "dest": "/style/$1" }
+  ],
+  "outputDirectory": "view/home"
 }
