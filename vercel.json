@@ -10,6 +10,5 @@
     { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/script/(.*)", "dest": "/script/$1" },
     { "src": "/style/(.*)", "dest": "/style/$1" }
-  ],
-  "outputDirectory": "view/home"
+  ]
 }
